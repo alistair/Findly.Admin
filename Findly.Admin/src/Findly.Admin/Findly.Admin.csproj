@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>0BAB3B73-DFAD-426D-BF88-CA869B6D81EC</ProjectGuid>
+    <ProjectGuid>{0BAB3B73-DFAD-426D-BF88-CA869B6D81EC}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>Findly.Admin</RootNamespace>
@@ -53,11 +53,20 @@
     <Reference Include="FubuMVC.Core.View">
       <HintPath>..\packages\FubuMVC.Core.View\lib\net40\FubuMVC.Core.View.dll</HintPath>
     </Reference>
+    <Reference Include="FubuMVC.Diagnostics">
+      <HintPath>..\packages\FubuMVC.Diagnostics\lib\net40\FubuMVC.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="FubuMVC.JQueryUI">
+      <HintPath>..\packages\FubuMVC.JQueryUI\lib\net40\FubuMVC.JQueryUI.dll</HintPath>
+    </Reference>
     <Reference Include="FubuMVC.Navigation">
       <HintPath>..\packages\FubuMVC.Navigation\lib\net40\FubuMVC.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Razor">
       <HintPath>..\packages\FubuMVC.Razor\lib\net40\FubuMVC.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="FubuMVC.Spark">
+      <HintPath>..\packages\FubuMVC.Spark\lib\net40\FubuMVC.Spark.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
       <HintPath>..\packages\FubuMVC.StructureMap\lib\net40\FubuMVC.StructureMap.dll</HintPath>
@@ -69,6 +78,9 @@
       <HintPath>..\packages\HtmlTags\lib\4.0\HtmlTags.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Spark">
+      <HintPath>..\packages\Spark\lib\NET40\Spark.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -84,12 +96,17 @@
     <Compile Include="AdminFubuRegistry.cs" />
     <Compile Include="AdminRegistry.cs" />
     <Compile Include="Global.asax.cs" />
-    <Compile Include="HomeEndpoint.cs" />
-    <Compile Include="HomeModel.cs" />
+    <Compile Include="Home\HomeEndpoint.cs" />
+    <Compile Include="Home\HomeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shared\Application.cshtml">
+      <SubType>Code</SubType>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
