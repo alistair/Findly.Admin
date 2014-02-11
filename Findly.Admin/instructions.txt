@@ -1,0 +1,23 @@
+* The FubuRegistry class is AdminFubuRegistry.  Use this class to register custom policies or
+  configure FubuMVC application settings
+
+
+
+
+* StructureMap configuration is in the file AdminRegistry
+* StructureMap's default 'IFoo is Foo' conventions are configured for this project
+
+The FubuMVC application is defined in the AdminApplication class.  It's unlikely that you'll
+need to customize the application bootstrapping, but AdminApplication is where that would
+happen.  You will want to refer to this class later if you use multiple forms of hosting (ASP.Net, 
+Katana, or Serenity).
+
+
+* The home page is served by HomeEndpoint.Index()
+* HomeEndpoint.Index() could be eliminated if you choose
+  to use Home.cshtml as an 'actionless view'
+* Shared/Application.cshtml is the master layout for the application
+
+
+
+
