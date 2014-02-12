@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Test title</title>
+        <title>Test title 2</title>
+        @{
+            this.Asset("jquery");
+            this.Asset("twitterbootstrap");
+        }
+        @this.WriteCssTags()
     </head>
     <body>
         @RenderSection("header", false)
         @RenderBody()
         @RenderSection("footer", false)
+        @this.WriteScriptTags()
     </body>
 </html>
