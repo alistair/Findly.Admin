@@ -1,0 +1,3 @@
+[submodule "FubuMVC.Bootstrap"]
+	path = FubuMVC.Bootstrap
+	url = git@github.com:synhershko/FubuMVC.Bootstrap.git
