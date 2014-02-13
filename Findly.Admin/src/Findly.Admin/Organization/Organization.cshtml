@@ -1,0 +1,27 @@
+@model Findly.Admin.Organization.OrganizationIndexModel
+
+@using Findly.Admin.Organization;
+
+<h2>Organizations</h2>
+
+<form method="POST" action="@this.Raw(this.Urls.UrlFor<NewOrganizationInputModel>())">
+    <input name="ShortCode" />
+    <input name="Title" />
+    <input type="submit" value="Add Organization" />
+</form>
+
+<table>
+    <tr>
+        <th>ShortCode</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    <tbody>
+        @foreach (var org in @Model.Organizations)
+        {
+            <tr>
+                <td>@org.ShortCode</td><td>@org.Name</td><td>&nbsp;</td>
+            </tr>
+        }
+    </tbody>
+</table>

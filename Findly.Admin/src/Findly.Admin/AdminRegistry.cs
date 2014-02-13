@@ -1,3 +1,4 @@
+using FubuPersistence.RavenDb;
 using StructureMap.Configuration.DSL;
 
 namespace Findly.Admin
@@ -10,6 +11,9 @@ namespace Findly.Admin
 			
             // Sets up the default "IFoo is Foo" naming convention
             // for auto-registration within this assembly
+
+            //IncludeRegistry<RavenDbRegistry>();
+
             Scan(x => {
                 x.TheCallingAssembly();
                 x.WithDefaultConventions();

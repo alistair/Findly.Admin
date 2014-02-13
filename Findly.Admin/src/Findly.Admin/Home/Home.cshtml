@@ -1,5 +1,23 @@
 @model Findly.Admin.HomeModel
 
+@using Findly.Admin.Organization;
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+          <h2>Organization</h2>
+          @this.Raw( this.LinkTo<OrganizationEndpoint>(x => x.Index()).Text("Organizations").ToString() )
+        </div>
+        <div class="col-md-4">
+          <h2>Monitoring</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div>
+    </div>
+</div>
+
+
+@*
 <h4>Instructions</h4>
 <pre>
 * The FubuRegistry class is AdminFubuRegistry.  Use this class to register custom policies or
@@ -21,8 +39,4 @@ Katana, or Serenity).
 * HomeEndpoint.Index() could be eliminated if you choose
   to use Home.cshtml as an 'actionless view'
 * Shared/Application.cshtml is the master layout for the application
-
-
-
-
-</pre>
+</pre>*@
